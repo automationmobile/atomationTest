@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [MyAnniversary]">
+  <test name="MyAnniversarySuite">
+    <classes>
+      <class name="testsuite.Anniversary_Suite"/>
+    </classes>
+  </test> <!-- MyAnniversarySuite -->
+  <test name="MyAnniversarySuite(failed)">
+    <classes>
+      <class name="testsuite.Anniversary_Suite">
+        <methods>
+          <include name="FNP_Anniversary_017" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_039" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_015" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_037" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_018" invocation-numbers="0"/>
+          <include name="Setup"/>
+          <include name="FNP_Anniversary_019" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_031" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_012" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_034" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_010" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_032" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_013" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_035" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_016" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_038" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_011" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_033" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_014" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_036" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_030" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_006" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_028" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_009" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_004" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_026" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_007" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_029" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_008" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_020" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_042" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_023" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_040" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_021" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_024" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_005" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_027" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_022" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_003" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_025" invocation-numbers="0"/>
+          <include name="FNP_Anniversary_041" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="FNP_Anniversary002"/>
+        </methods>
+      </class> <!-- testsuite.Anniversary_Suite -->
+    </classes>
+  </test> <!-- MyAnniversarySuite(failed) -->
+</suite> <!-- Failed suite [MyAnniversary] -->
