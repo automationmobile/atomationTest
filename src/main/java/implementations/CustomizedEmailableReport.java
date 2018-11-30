@@ -204,7 +204,7 @@ public class CustomizedEmailableReport implements IReporter {
                         + "</a>"
                         + (null == testInstanceName ? "" : "<br>("
                         + testInstanceName + ")") + "</td>"
-                        + "<td class=\"numi\" style=\"text-align:left;padding-center:2em\">" + firstLine+"<br/></td>"
+                        + "<td class=\"numi\" style=\"color:white;text-align:left;padding-center:2em\">" + firstLine+"<br/></td>"
                          
                         + "</tr>");
                 //resultSet.size();
@@ -212,7 +212,7 @@ public class CustomizedEmailableReport implements IReporter {
             if (mq > 0) {
                 cq += 1;
                 out.print("<tr class=\"" + style
-                        + (cq % 2 == 0 ? "even" : "odd") + "\">" + "<td");
+                        + (cq % 2 == 0 ? "even" : "odd") + "\">" + "<td style=" + "color:white;");
                 if (mq > 1) {
                     out.print(" rowspan=\"" + mq + "\"");
                 }

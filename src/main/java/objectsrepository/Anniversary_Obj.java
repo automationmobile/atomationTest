@@ -9,6 +9,7 @@ public class Anniversary_Obj
 		String val="//span[@id='user-name']";
 		return val;
 	}
+	
 	public static String validate_Cart(WebDriver driver)
 	{
 		String val="(//span[@class='cart-icon'])[last()]";
@@ -112,9 +113,10 @@ public class Anniversary_Obj
 	}
 	public static String verify_Pincode(WebDriver driver)
 	{
-		String val="//a[text()='View more details']/preceding::div[2]";
+		String val="//div[@class='price-crossline']";
 		return val;
 	}
+	
 	public static String verify_Date(WebDriver driver)
 	{
 		String val="//a[@id='datetimelink']";
@@ -159,6 +161,11 @@ public class Anniversary_Obj
 	public static String clickOn_NextDate(WebDriver driver)
 	{
 		String val="(//div[@class='DayPicker-Day'])[1]";
+		return val;
+	}
+	public static String clickOn_NextMonth(WebDriver driver)
+	{
+		String val="//i[text()='arrow_right']";
 		return val;
 	}
 	public static String clickOn_ShippingMethod(WebDriver driver)

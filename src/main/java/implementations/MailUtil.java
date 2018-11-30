@@ -35,7 +35,7 @@ public static void sendMail(String console, String TestID,String TestName ) {
 		
 		try {
 		  Message msg = new MimeMessage(session);
-		  msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:MyAccountSuite"));
+		  msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:AnniversaryFlowersSuite"));
 		  msg.addRecipient(Message.RecipientType.TO, new InternetAddress("saikumar@clicqa.com"));
 		  String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 		  msg.setSubject("!!!Alert!!! Critical : "+TestID+ "-->"+TestName+ " --Failed--\t TimeStamp:" +timeStamp);
@@ -59,7 +59,7 @@ public static void sendConsolidatedReport() {
 		
 		try {
 			Message msg = new MimeMessage(session);
-			msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:MyAccountSuite"));
+			msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:AnniversaryFlowersSuite"));
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress("saikumar@clicqa.com"));
 			String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 			msg.setSubject("Alert:'Critical:Login Failed'\t" + timeStamp);
@@ -118,7 +118,7 @@ public static void sendConsolidatedReport() {
 			
 			if(count>0)
 			{
-				msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:MyAccountSuite"));
+				msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:AnniversaryFlowersSuite"));
 				msg.addRecipient(Message.RecipientType.TO, new InternetAddress("saikumar@clicqa.com"));
 				msg.setSubject("!!!Alert!!! "+count+" Critical Test Case Failed \t TimeStamp: " +timeStamp);
 				msg.setContent(mp);
@@ -127,7 +127,7 @@ public static void sendConsolidatedReport() {
 			}
 			else
 			{
-				msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:MyAccountSuite"));
+				msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:AnniversaryFlowersSuite"));
 				msg.addRecipient(Message.RecipientType.TO, new InternetAddress("saikumar@clicqa.com"));
 				msg.setSubject("No Critical Test Failures\t TimeStamp" +timeStamp);
 				msg.setContent(mp);

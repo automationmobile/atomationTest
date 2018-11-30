@@ -9,6 +9,7 @@ import implementations.TestWebDriverMethodImplementations;
 import implementations.UploadImage;
 import objectsrepository.Anniversary_Obj;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -210,6 +211,10 @@ public class Anniversary_Steps
 	}
 	public static void clickOn_NextDate(WebDriver driver)
 	{
+		String[] nextMonth =
+			{ Anniversary_Obj.clickOn_NextMonth(driver) };
+			implementations.ActionsImplementation.clickOnLocator(driver, "xpath", nextMonth);
+			TestWebDriverMethodImplementations.smallSleep(driver);
 		String[] val={Anniversary_Obj.clickOn_NextDate(driver)};
 		implementations.ActionsImplementation.clickOnLocator(driver, "xpath", val);
 	}
@@ -720,7 +725,7 @@ public class Anniversary_Steps
 	
 		
 	
-	public static void FNP_Anniversary_042(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_042(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String occationType,String messageOnCard,String creditCardNumber
 			,String creditCardName,String month,String year,String cvv)
 	{
@@ -792,7 +797,7 @@ public class Anniversary_Steps
 		clickOn_PayButtonInPaymentDetails(driver);
 		TestWebDriverMethodImplementations.longSleep(driver);
 	}
-	public static void FNP_Anniversary_041(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_041(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String occationType,String messageOnCard,String creditCardNumber
 			,String creditCardName,String month,String year,String cvv)
 	{
@@ -865,7 +870,7 @@ public class Anniversary_Steps
 		verify_ErrorForBlankDataInCreditCardInPaymentDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_040(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_040(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String occationType,String messageOnCard)
 	{
 		mouseHover_Anniverary(driver);
@@ -927,7 +932,7 @@ public class Anniversary_Steps
 		verify_ErrorForBlankDataInCreditCardInPaymentDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_039(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_039(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String occationType,String messageOnCard)
 	{
 		mouseHover_Anniverary(driver);
@@ -994,7 +999,7 @@ public class Anniversary_Steps
 		verify_PayButtonInPaymentDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_038(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_038(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String occationType,String messageOnCard)
 	{
 		mouseHover_Anniverary(driver);
@@ -1061,7 +1066,7 @@ public class Anniversary_Steps
 		verify_Amex_ezeClickInPaymentDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_037(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_037(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String occationType,String messageOnCard)
 	{
 		mouseHover_Anniverary(driver);
@@ -1121,7 +1126,7 @@ public class Anniversary_Steps
 		verify_PaymentOptions(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_036(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_036(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String occationType,String messageOnCard)
 	{
 		mouseHover_Anniverary(driver);
@@ -1180,7 +1185,7 @@ public class Anniversary_Steps
 		verify_ErrorforProceedToCheckoutInDeliveryDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_035(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_035(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber)
 	{
 		mouseHover_Anniverary(driver);
@@ -1231,7 +1236,7 @@ public class Anniversary_Steps
 		
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_034(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_034(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String nameInDeliveyPage2,String mobileNumber2)
 	{
 		mouseHover_Anniverary(driver);
@@ -1286,7 +1291,7 @@ public class Anniversary_Steps
 		verify_AddedAddressInDeliveryDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_033(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_033(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String optionalMailId)
 	{
 		mouseHover_Anniverary(driver);
@@ -1333,7 +1338,7 @@ public class Anniversary_Steps
 		verify_ErrorMessageForInvalidMobileNumberInDeliveryDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_032(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_032(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String optionalMailId)
 	{
 		mouseHover_Anniverary(driver);
@@ -1379,7 +1384,7 @@ public class Anniversary_Steps
 		verify_OptionalMailidInDeliveryDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_031(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String mobileNumber)
+	public static void fnp_Anniversary_031(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String mobileNumber)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1417,7 +1422,7 @@ public class Anniversary_Steps
 		verify_ErrorMessageForInvalidMobileNumberInDeliveryDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_030(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String mobileNumber)
+	public static void fnp_Anniversary_030(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String mobileNumber)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1455,7 +1460,7 @@ public class Anniversary_Steps
 		verify_MobileNumberInDeliveyAddressPage(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_029(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password
+	public static void fnp_Anniversary_029(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password
 			,String recepientAddress)
 	{
 		mouseHover_Anniverary(driver);
@@ -1495,7 +1500,7 @@ public class Anniversary_Steps
 		verify_RecppientsAddressInDeliveyAddressPage(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_028(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
+	public static void fnp_Anniversary_028(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber)
 	{
 		mouseHover_Anniverary(driver);
@@ -1542,7 +1547,7 @@ public class Anniversary_Steps
 		verify_AddedAddressInDeliveryDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_027(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,String nameInDeliveyPage)
+	public static void fnp_Anniversary_027(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,String nameInDeliveyPage)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1582,7 +1587,7 @@ public class Anniversary_Steps
 		verify_NameInDeliveyAddressPage(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_026(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,String nameInDeliveyPage)
+	public static void fnp_Anniversary_026(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,String nameInDeliveyPage)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1622,7 +1627,7 @@ public class Anniversary_Steps
 		verify_NameInDeliveyAddressPage(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_025(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,String nameInDeliveyPage)
+	public static void fnp_Anniversary_025(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,String nameInDeliveyPage)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1661,7 +1666,7 @@ public class Anniversary_Steps
 		sendKeys_NameInDeliveyAddressPage(driver,nameInDeliveyPage);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_024(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
+	public static void fnp_Anniversary_024(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1699,7 +1704,7 @@ public class Anniversary_Steps
 		verify_ErrorForWithoutEnteringDataInDeliveryAddress(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_023(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
+	public static void fnp_Anniversary_023(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1736,7 +1741,7 @@ public class Anniversary_Steps
 		verify_PhoneNumberInDeliveryPage(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_022(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
+	public static void fnp_Anniversary_022(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1771,13 +1776,21 @@ public class Anniversary_Steps
 		clickOn_DeleteButtonInDeliveryDtailsPage(driver, flowerName);
 		clickOn_Yes(driver);
 		TestWebDriverMethodImplementations.mediumSleep(driver);
+		try{
 		verify_CartIsEmpty(driver);
 		clickOn_StartShoppingNow(driver);
 		TestWebDriverMethodImplementations.mediumSleep(driver);
 		validate_Fnp_Logo(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_021(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
+	catch(Exception e)
+	{
+		implementations.ReusableMethodsImplementation.testCaseInfo_WithScreenshot(driver, "Products still existing in cart", logger, report);
+		reusableMethod(driver, flowerName);
+	}
+		
+	}
+	public static void fnp_Anniversary_021(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1821,7 +1834,7 @@ public class Anniversary_Steps
 		verify_DeliveryMethod(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_020(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
+	public static void fnp_Anniversary_020(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1859,7 +1872,7 @@ public class Anniversary_Steps
 		verify_TotalAmountInProductDeliveryPage(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_019(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
+	public static void fnp_Anniversary_019(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1895,7 +1908,7 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
 	
-	public static void FNP_Anniversary_018(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
+	public static void fnp_Anniversary_018(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1930,7 +1943,7 @@ public class Anniversary_Steps
 		verify_OrderAndDeliveryDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_017(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName)
+	public static void fnp_Anniversary_017(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1962,7 +1975,7 @@ public class Anniversary_Steps
 		verify_PaymentOptions(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_016(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName
+	public static void fnp_Anniversary_016(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName
 			,String emailId,String name,String mobileNumber,String invalidPassword,String validPassword)
 	{
 		mouseHover_Anniverary(driver);
@@ -2005,7 +2018,7 @@ public class Anniversary_Steps
 		verify_OrderAndDeliveryDetails(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_015(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName)
+	public static void fnp_Anniversary_015(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2038,7 +2051,7 @@ public class Anniversary_Steps
 		verify_PaymentOptions(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_014(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
+	public static void fnp_Anniversary_014(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2066,7 +2079,7 @@ public class Anniversary_Steps
 		verify_LoginPageAfterAddingProduct(driver, logger, report);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_013(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
+	public static void fnp_Anniversary_013(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2081,7 +2094,7 @@ public class Anniversary_Steps
 		verify_PncodeErrorInProductDetailsPage(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_012(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName)
+	public static void fnp_Anniversary_012(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2111,7 +2124,7 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		
 	}
-	public static void FNP_Anniversary_011(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName)
+	public static void fnp_Anniversary_011(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2123,7 +2136,7 @@ public class Anniversary_Steps
 		clickOn_BuyNow(driver);
 		verify_PncodeErrorInProductDetailsPage(driver);
 	}
-	public static void FNP_Anniversary_010(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
+	public static void fnp_Anniversary_010(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2150,7 +2163,7 @@ public class Anniversary_Steps
 		verify_TimeSlot(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_009(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String pincode2,String pincode3)
+	public static void fnp_Anniversary_009(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String pincode2,String pincode3)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2173,7 +2186,7 @@ public class Anniversary_Steps
 		clicOn_pincodeSuggestion(driver, pincode3);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_008(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
+	public static void fnp_Anniversary_008(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2207,7 +2220,7 @@ public class Anniversary_Steps
 		verify_MessageAfterProductRemove(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_007(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
+	public static void fnp_Anniversary_007(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2242,7 +2255,7 @@ public class Anniversary_Steps
 		
 		
 	}
-	public static void FNP_Anniversary_006(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
+	public static void fnp_Anniversary_006(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2272,7 +2285,7 @@ public class Anniversary_Steps
 		verify_ProductInCart(driver, flowerName);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_005(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName)
+	public static void fnp_Anniversary_005(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2286,7 +2299,7 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		//=============================================================================
 	}
-	public static void FNP_Anniversary_004(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName)
+	public static void fnp_Anniversary_004(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2303,7 +2316,7 @@ public class Anniversary_Steps
 		verify_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void FNP_Anniversary_003(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName)
+	public static void fnp_Anniversary_003(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName)
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -2316,7 +2329,7 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
 	
-	public static void FNP_Anniversary_002(WebDriver driver, ExtentTest logger, ExtentReports report)
+	public static void fnp_Anniversary_002(WebDriver driver, ExtentTest logger, ExtentReports report)
 	{
 		validate_Account(driver);
 		validate_Cart(driver);
@@ -2355,14 +2368,9 @@ public class Anniversary_Steps
 		{
 			System.out.println("Removing products in cart");
 		}
-		try
+		Boolean validate=driver.findElements(By.xpath(Anniversary_Obj.verify_MessageAfterProductRemove(driver))).size()!=0;
+		if(validate==false)
 		{
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.verifyWebElementWithBoolean(driver, Anniversary_Obj.verify_MessageAfterProductRemove(driver));
-		}
-		catch (Exception e2)
-		{
-		}
 		try
 		{
 			clickOn_ProductRemoveOption(driver, flowerName);
@@ -2395,13 +2403,20 @@ public class Anniversary_Steps
 		}
 		catch (Exception e5)
 		{
+			clickOn_Fnp_Logo(driver);
+			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+		}
 		}
 	}
 
 	public static void reusableMethod_OnlyRemoveProduct(WebDriver driver, String flowerName)
 	{
+		Boolean ele=driver.findElements(By.xpath(Anniversary_Obj.verify_MessageAfterRemoveProduct(driver))).size()!=0;
+		if(ele==false)
+		{
 		try
 		{
+			TestWebDriverMethodImplementations.smallSleep(driver);
 			clickOn_ProductRemoveOption(driver, flowerName);
 			TestWebDriverMethodImplementations.smallSleep(driver);
 			TestWebDriverMethodImplementations.alertAccept(driver);
@@ -2412,6 +2427,7 @@ public class Anniversary_Steps
 		}
 		try
 		{
+			TestWebDriverMethodImplementations.smallSleep(driver);
 			clickOn_ProductRemoveOption(driver, flowerName);
 			TestWebDriverMethodImplementations.smallSleep(driver);
 			TestWebDriverMethodImplementations.alertAccept(driver);
@@ -2420,74 +2436,6 @@ public class Anniversary_Steps
 		catch (Exception e4)
 		{
 		}
-	}
-	public static void clearingProductsFromCart(WebDriver driver,String emailId,String password, String flowerName)
-	{
-		try{
-			mouseHoverTo_Account(driver);
-			clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			SendKeys_EmailId(driver, emailId);
-			clickOn_LoginContinueButton(driver);
-			SendKeys_Password(driver, password);
-			clickOn_LoginContinueButton(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			
-		}catch(Exception e)
-		{
-			
-		}
-		try
-		{
-			clickOn_Fnp_Logo(driver);
-			TestWebDriverMethodImplementations.mediumSleep(driver);
-		}
-		catch (Exception e6)
-		{
-		}
-		try
-		{
-			clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			System.out.println("Removing products in cart");
-		}
-		catch (Exception e1)
-		{
-		}
-		try{
-		Boolean ele=driver.findElements(By.xpath(Anniversary_Obj.verify_MessageAfterProductRemove(driver))).size()!=0;
-		if(ele==true)
-		{
-		List<WebElement> elementSize=driver.findElements(By.xpath(Anniversary_Obj.clickOn_ProductRemoveOption(driver, flowerName)));
-		int size=elementSize.size();
-		for(int i=1;i<size;i++)
-		{
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			i++;
-		}
-		}
-		}
-		catch(Exception e)
-		{
-			
-		}
-		
-		try
-		{
-			clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			mouseHoverTo_Account(driver);
-			clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-		}
-		catch (Exception e5)
-		{
 		}
 	}
 
