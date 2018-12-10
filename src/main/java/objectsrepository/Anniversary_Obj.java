@@ -158,6 +158,11 @@ public class Anniversary_Obj
 		String val="(//td[@data-handler='selectDay'])[2]";
 		return val;
 	}
+	public static String clickOn_NextMonthOnPdp(WebDriver driver)
+	{
+		String val="(//a[@data-handler='next'])[1]";
+		return val;
+	}
 	public static String clickOn_NextDate(WebDriver driver)
 	{
 		String val="(//div[@class='DayPicker-Day'])[1]";
@@ -230,6 +235,11 @@ public class Anniversary_Obj
 		String val="(//span[text()='"+productName+"'])[1]/following::span[1]";
 		return val;
 				
+	}
+	public static String clickOn_ProductRemoveOption2(WebDriver driver,String productName)
+	{
+		String val="(//span[text()='"+productName+"'])/following::span[1]";
+		return val;	
 	}
 	public static String clickOn_AddonProduct(WebDriver driver,String addOnProductName)
 	{
@@ -680,5 +690,9 @@ public class Anniversary_Obj
 		String val="//li[text()='"+value+"']";
 		return val;
 	}
-	
+	public static String verifyPaymentSucessfulMessage(WebDriver driver)
+	{
+		String val="//span[@class='orderId']";
+		return val;
+	}
 }

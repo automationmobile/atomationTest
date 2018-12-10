@@ -236,7 +236,7 @@ public abstract class ReusableMethodsImplementation implements GenericActions
 		return report;
 	}
 
-	public static ExtentReports testCaseStatus_Fail(WebDriver driver, Exception e, String Message, ExtentTest logger, ExtentReports report) throws Exception
+	public static void testCaseStatus_Fail(WebDriver driver, Exception e, String Message, ExtentTest logger, ExtentReports report)
 	{
 		try
 		{
@@ -252,7 +252,7 @@ public abstract class ReusableMethodsImplementation implements GenericActions
 		catch (Exception E)
 		{
 		}
-		throw e;
+		//throw e;
 	}
 	public static ExtentReports testCaseInfo_WithScreenshot(WebDriver driver, String Message, ExtentTest logger, ExtentReports report)
 	{

@@ -110,9 +110,7 @@ public class Anniversary_Suite
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify user able to select the product from the header tool bar is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_004")
@@ -135,9 +133,8 @@ public class Anniversary_Suite
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify UI of the Gift Booking window is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);			
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_005")
@@ -160,9 +157,8 @@ public class Anniversary_Suite
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify the functionality of the Add To Cart button without entering a data is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_006")
@@ -179,19 +175,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify user able to Add the Product To Cart in gift booking window");
 			Anniversary_Steps.fnp_Anniversary_006(driver, logger, report, flowerName, pincode);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify user able to Add the Product To Cart in gift booking window is pass", logger, report);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutLogout(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify user able to Add the Product To Cart in gift booking window is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_007")
@@ -208,19 +198,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify User able to View the Product in the Cart page.");
 			Anniversary_Steps.fnp_Anniversary_007(driver, logger, report, flowerName, pincode);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify User able to View the Product in the Cart page is pass", logger, report);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutLogout(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify User able to View the Product in the Cart page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_008")
@@ -243,9 +227,8 @@ public class Anniversary_Suite
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify User able to Remove the Product in the Cart page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_009")
@@ -268,9 +251,8 @@ public class Anniversary_Suite
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify user able to Edit the pin code in Gift booking window is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_010")
@@ -293,9 +275,8 @@ public class Anniversary_Suite
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify User able to view the Delivery Date & Time in the gift booking window is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_011")
@@ -318,9 +299,8 @@ public class Anniversary_Suite
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify functionality of  Buy Now button without Entering data is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_012")
@@ -337,23 +317,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify functionality of  Buy Now button with continue with Add-On ");
 			Anniversary_Steps.fnp_Anniversary_012(driver, logger, report, flowerName, pincode, addOnProductName);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify functionality of  Buy Now button with continue with Add-On is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutLogout(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify functionality of  Buy Now button with continue with Add-On is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_013")
@@ -376,9 +346,8 @@ public class Anniversary_Suite
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify Functionality of the Buy Now button with Invalid Pin/ Area is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_014")
@@ -395,23 +364,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify Functionality of the Buy Now button without Add-on");
 			Anniversary_Steps.fnp_Anniversary_014(driver, logger, report, flowerName, pincode);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify Functionality of the Buy Now button without Add-on is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutLogout(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify Functionality of the Buy Now button without Add-on is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_015")
@@ -428,24 +387,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify UI of the Checkout Login page");
 			Anniversary_Steps.fnp_Anniversary_015(driver, logger, report, flowerName, pincode, addOnProductName);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify UI of the Checkout Login page is pass", logger, report);
-			
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutLogout(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify UI of the Checkout Login page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_016")
@@ -462,28 +410,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify user able to Register with  unregistered  Email id in the checkout login/ Sign up page");
 			Anniversary_Steps.fnp_Anniversary_016(driver, logger, report, flowerName, pincode, addOnProductName, emailId, name, mobileNumber, invalidPassword, validPassword);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify user able to Register with  unregistered  Email id in the checkout login/ Sign up page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify user able to Register with  unregistered  Email id in the checkout login/ Sign up page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_017")
@@ -500,23 +433,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify 'Continue' button functionality with Invalid mail id  in Checkout log-in page");
 			Anniversary_Steps.fnp_Anniversary_017(driver, logger, report, flowerName, pincode, addOnProductName);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify 'Continue' button functionality with Invalid mail id  in Checkout log-in page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutLogout(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify 'Continue' button functionality with Invalid mail id  in Checkout log-in page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_018")
@@ -533,28 +456,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify 'Continue' button functionality with Valid mail id  and valid password in Checkout log-in page");
 			Anniversary_Steps.fnp_Anniversary_018(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify 'Continue' button functionality with Valid mail id  and valid password in Checkout log-in page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify 'Continue' button functionality with Valid mail id  and valid password in Checkout log-in page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_019")
@@ -571,28 +479,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify 'Continue' button functionality with In-valid Password in Checkout log-in page");
 			Anniversary_Steps.fnp_Anniversary_019(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify 'Continue' button functionality with In-valid Password in Checkout log-in page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			/*Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);*/
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify 'Continue' button functionality with In-valid Password in Checkout log-in page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_020")
@@ -609,28 +502,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify UI of the Delivery Details page");
 			Anniversary_Steps.fnp_Anniversary_020(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify UI of the Delivery Details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify UI of the Delivery Details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_021")
@@ -647,28 +525,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify functionality of the 'Change' button in delivery details page");
 			Anniversary_Steps.fnp_Anniversary_021(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify functionality of the 'Change' button in delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify functionality of the 'Change' button in delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_022")
@@ -685,24 +548,12 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify functionality of the 'Delete' button in Delivery details page");
 			Anniversary_Steps.fnp_Anniversary_022(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify functionality of the 'Delete' button in Delivery details page is pass", logger, report);
-			try{
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			}catch(Exception e3)
-			{
-				
-			}
-			Anniversary_Steps.reusableMethod(driver, flowerName);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify functionality of the 'Delete' button in Delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_023")
@@ -719,28 +570,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify User able to view the sender's details  in the delivery details page");
 			Anniversary_Steps.fnp_Anniversary_023(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify User able to view the sender's details  in the delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify User able to view the sender's details  in the delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_024")
@@ -757,28 +593,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify the functionality of the 'save address' button without Entering data in Delivery details page");
 			Anniversary_Steps.fnp_Anniversary_024(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify the functionality of the 'save address' button without Entering data in Delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify the functionality of the 'save address' button without Entering data in Delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_025")
@@ -795,28 +616,13 @@ public class Anniversary_Suite
 			logger = report.startTest("verify the BVA of recipients name on delivery details page");
 			Anniversary_Steps.fnp_Anniversary_025(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "verify the BVA of recipients name on delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "verify the BVA of recipients name on delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_026")
@@ -833,28 +639,13 @@ public class Anniversary_Suite
 			logger = report.startTest("verify the functionality  of recipients name in delivery details page");
 			Anniversary_Steps.fnp_Anniversary_026(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "verify the functionality  of recipients name in delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "verify the functionality  of recipients name in delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_027")
@@ -871,28 +662,13 @@ public class Anniversary_Suite
 			logger = report.startTest("verify the functionality  of recipients name in delivery details page");
 			Anniversary_Steps.fnp_Anniversary_027(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "verify the functionality  of recipients name in delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "verify the functionality  of recipients name in delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_028")
@@ -909,28 +685,13 @@ public class Anniversary_Suite
 			logger = report.startTest("verify the functionality  of recipients  Address in delivery details page");
 			Anniversary_Steps.fnp_Anniversary_028(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "verify the functionality  of recipients  Address in delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "verify the functionality  of recipients  Address in delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_029")
@@ -947,28 +708,13 @@ public class Anniversary_Suite
 			logger = report.startTest("verify the functionality  of recipients  Address in delivery details page");
 			Anniversary_Steps.fnp_Anniversary_029(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, recepientAddress);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "verify the functionality  of recipients  Address in delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "verify the functionality  of recipients  Address in delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_030")
@@ -985,28 +731,13 @@ public class Anniversary_Suite
 			logger = report.startTest("verify the functionality  of recipients  mobile number in delivery details page");
 			Anniversary_Steps.fnp_Anniversary_030(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, mobileNumber);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "verify the functionality  of recipients  mobile number in delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "verify the functionality  of recipients  mobile number in delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_031")
@@ -1023,28 +754,13 @@ public class Anniversary_Suite
 			logger = report.startTest("verify the functionality  of recipients  mobile number in delivery details page");
 			Anniversary_Steps.fnp_Anniversary_031(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, mobileNumber);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "verify the functionality  of recipients  mobile number in delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "verify the functionality  of recipients  mobile number in delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_032")
@@ -1061,28 +777,13 @@ public class Anniversary_Suite
 			logger = report.startTest("verify the functionality  of recipient Email field  in delivery details page");
 			Anniversary_Steps.fnp_Anniversary_032(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber, optionalMailId);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "verify the functionality  of recipient Email field  in delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "verify the functionality  of recipient Email field  in delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_033")
@@ -1099,28 +800,13 @@ public class Anniversary_Suite
 			logger = report.startTest("verify the functionality  of Save Address button by entering Invalid data in delivery details page");
 			Anniversary_Steps.fnp_Anniversary_033(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber, optionalMailId);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "verify the functionality  of Save Address button by entering Invalid data in delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "verify the functionality  of Save Address button by entering Invalid data in delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_034")
@@ -1137,28 +823,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify User able to Edit the Address in the Delivery details page");
 			Anniversary_Steps.fnp_Anniversary_034(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber, nameInDeliveyPage2, mobileNumber2);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify User able to Edit the Address in the Delivery details page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify User able to Edit the Address in the Delivery details page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_035")
@@ -1177,28 +848,13 @@ public class Anniversary_Suite
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify the user able to write the message on card is pass", logger, report);
 			Anniversary_Steps.clickOn_CancelforMessageCardInDeliveryDetails(driver);
 			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify the user able to write the message on card is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_036")
@@ -1215,28 +871,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify the functionality of the Proceed To Pay Button in Order summary page");
 			Anniversary_Steps.fnp_Anniversary_036(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber, occationType, messageOnCard);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify the functionality of the Proceed To Pay Button in Order summary page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify the functionality of the Proceed To Pay Button in Order summary page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_037")
@@ -1253,28 +894,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify the functionality of the Proceed To Pay Button in Order summary page");
 			Anniversary_Steps.fnp_Anniversary_037(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber, occationType, messageOnCard);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify the functionality of the Proceed To Pay Button in Order summary page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify the functionality of the Proceed To Pay Button in Order summary page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_038")
@@ -1291,28 +917,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify UI of the Payment page");
 			Anniversary_Steps.fnp_Anniversary_038(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber, occationType, messageOnCard);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify UI of the Payment page is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify UI of the Payment page is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_039")
@@ -1329,28 +940,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify User able to select the Credit card");
 			Anniversary_Steps.fnp_Anniversary_039(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber, occationType, messageOnCard);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify User able to select the Credit card is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify User able to select the Credit card is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_040")
@@ -1367,28 +963,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify functionality of the PAY button without entering data");
 			Anniversary_Steps.fnp_Anniversary_040(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber, occationType, messageOnCard);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify functionality of the PAY button without entering data is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify functionality of the PAY button without entering data is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_041")
@@ -1406,28 +987,13 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify functionality of the PAY button with entering a Invalid  card details");
 			Anniversary_Steps.fnp_Anniversary_041(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber, occationType, messageOnCard, creditCardNumber, creditCardName, month, year, cvv);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify functionality of the PAY button with entering a Invalid  card details is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify functionality of the PAY button with entering a Invalid  card details is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
+			
 		}
 	}
 	@DataProvider(name = "fnp_Anniversary_042")
@@ -1445,28 +1011,12 @@ public class Anniversary_Suite
 			logger = report.startTest("Verify functionality of the PAY button with entering a Valid  card details");
 			Anniversary_Steps.fnp_Anniversary_042(driver, logger, report, flowerName, pincode, addOnProductName, emailId, password, namePrefix, nameInDeliveyPage, recepientAddress, landmark, mobileNumber, occationType, messageOnCard, creditCardNumber, creditCardName, month, year, cvv);
 			ReusableMethodsImplementation.testCaseStatus_Pass(driver, "Verify functionality of the PAY button with entering a Valid  card details is pass", logger, report);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.clickOn_Cart_AfterAddingProduct(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
-			Anniversary_Steps.mouseHoverTo_Account(driver);
-			Anniversary_Steps.clickOn_MyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
-			Anniversary_Steps.clickOn_LogoutInMyProfile(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod_WithoutException(driver, flowerName);
 		}
 		catch (Exception e)
 		{
 			ReusableMethodsImplementation.testCaseStatus_Fail(driver, e, "Verify functionality of the PAY button with entering a Valid  card details is fail", logger, report);
-			Anniversary_Steps.reusableMethod(driver, flowerName);
-			Anniversary_Steps.clickOn_Fnp_Logo(driver);
-			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			Anniversary_Steps.reusableMethod(driver, e, flowerName);
 		}
 	}
 }

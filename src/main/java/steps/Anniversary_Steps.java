@@ -9,7 +9,6 @@ import implementations.TestWebDriverMethodImplementations;
 import implementations.UploadImage;
 import objectsrepository.Anniversary_Obj;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -206,6 +205,10 @@ public class Anniversary_Steps
 	}
 	public static void clickOn_SameDayDate(WebDriver driver)
 	{
+		String[] nextMonth =
+			{ Anniversary_Obj.clickOn_NextMonthOnPdp(driver) };
+			implementations.ActionsImplementation.clickOnLocator(driver, "xpath", nextMonth);
+			TestWebDriverMethodImplementations.smallSleep(driver);
 		String[] val={Anniversary_Obj.clickOn_SameDayDate(driver)};
 		implementations.ActionsImplementation.clickOnLocator(driver, "xpath", val);
 	}
@@ -722,7 +725,10 @@ public class Anniversary_Steps
 		implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verify_ErrorForBlankDataInCreditCardInPaymentDetails(driver));
 
 	}
-	
+	public static void verifyPaymentSucessfulMessage(WebDriver driver)
+	{
+		implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verifyPaymentSucessfulMessage(driver));
+	}
 		
 	
 	public static void fnp_Anniversary_042(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
@@ -796,6 +802,7 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_PayButtonInPaymentDetails(driver);
 		TestWebDriverMethodImplementations.longSleep(driver);
+		verifyPaymentSucessfulMessage(driver);
 	}
 	public static void fnp_Anniversary_041(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password,String namePrefix,
 			String nameInDeliveyPage,String recepientAddress,String landmark,String mobileNumber,String occationType,String messageOnCard,String creditCardNumber
@@ -1454,7 +1461,6 @@ public class Anniversary_Steps
 		sendKeys_PasswordInProductDeliveryPage(driver, password);
 		clickOn_Continue(driver);
 		TestWebDriverMethodImplementations.longSleep(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
 		VerifyWithBoolean_SelectDeliveryAddress(driver);
 		sendKeys_MobileNumberInDeliveyAddressPage(driver,mobileNumber);
 		verify_MobileNumberInDeliveyAddressPage(driver);
@@ -1741,7 +1747,7 @@ public class Anniversary_Steps
 		verify_PhoneNumberInDeliveryPage(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
-	public static void fnp_Anniversary_022(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password)
+	public static void fnp_Anniversary_022(WebDriver driver, ExtentTest logger, ExtentReports report,String flowerName,String pincode,String addOnProductName,String emailId,String password) throws Exception
 	{
 		mouseHover_Anniverary(driver);
 		clickOn_Flowers(driver);
@@ -1786,7 +1792,7 @@ public class Anniversary_Steps
 	catch(Exception e)
 	{
 		implementations.ReusableMethodsImplementation.testCaseInfo_WithScreenshot(driver, "Products still existing in cart", logger, report);
-		reusableMethod(driver, flowerName);
+		reusableMethod(driver, e, flowerName);
 	}
 		
 	}
@@ -2349,7 +2355,7 @@ public class Anniversary_Steps
 		validate_GlobalMouseHover(driver);
 	}
 	//This method is to remove products from cart if test case fails.
-	public static void reusableMethod(WebDriver driver, String flowerName)
+	public static void reusableMethod(WebDriver driver, Exception e, String flowerName) throws Exception
 	{
 		try
 		{
@@ -2368,29 +2374,25 @@ public class Anniversary_Steps
 		{
 			System.out.println("Removing products in cart");
 		}
-		Boolean validate=driver.findElements(By.xpath(Anniversary_Obj.verify_MessageAfterProductRemove(driver))).size()!=0;
-		if(validate==false)
-		{
-		try
-		{
-			clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-		}
-		catch (Exception e3)
-		{
-		}
-		try
-		{
-			clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-		}
-		catch (Exception e4)
-		{
-		}
+		try{
+			int size = driver.findElements(By.xpath(Anniversary_Obj.clickOn_ProductRemoveOption2(driver, flowerName))).size();
+			System.out.println(size);
+			if(size!=0)
+			{
+			for (int i = 0; i<size; i++)
+			{
+				TestWebDriverMethodImplementations.smallSleep(driver);
+				clickOn_ProductRemoveOption(driver, flowerName);
+				TestWebDriverMethodImplementations.smallSleep(driver);
+				TestWebDriverMethodImplementations.alertAccept(driver);
+				TestWebDriverMethodImplementations.smallSleep(driver);
+				System.out.println("deleted");
+			}
+			}
+			}catch(Exception ew)
+			{
+				
+			}
 		try
 		{
 			clickOn_Fnp_Logo(driver);
@@ -2406,37 +2408,108 @@ public class Anniversary_Steps
 			clickOn_Fnp_Logo(driver);
 			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
 		}
+		throw e;
+	}
+	public static void reusableMethod_WithoutException(WebDriver driver, String flowerName) throws Exception
+	{
+		try
+		{
+			clickOn_Fnp_Logo(driver);
+			TestWebDriverMethodImplementations.mediumSleep(driver);
+		}
+		catch (Exception e6)
+		{
+		}
+		try
+		{
+			clickOn_Cart_AfterAddingProduct(driver);
+			TestWebDriverMethodImplementations.smallSleep(driver);
+		}
+		catch (Exception e1)
+		{
+			System.out.println("Removing products in cart");
+		}
+		try{
+			int size = driver.findElements(By.xpath(Anniversary_Obj.clickOn_ProductRemoveOption2(driver, flowerName))).size();
+			System.out.println(size);
+			if(size!=0)
+			{
+			for (int i = 0; i<size; i++)
+			{
+				TestWebDriverMethodImplementations.smallSleep(driver);
+				clickOn_ProductRemoveOption(driver, flowerName);
+				TestWebDriverMethodImplementations.smallSleep(driver);
+				TestWebDriverMethodImplementations.alertAccept(driver);
+				TestWebDriverMethodImplementations.smallSleep(driver);
+				System.out.println("deleted");
+			}
+			}
+			}catch(Exception ew)
+			{
+				
+			}
+		try
+		{
+			clickOn_Fnp_Logo(driver);
+			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+			mouseHoverTo_Account(driver);
+			clickOn_MyProfile(driver);
+			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
+			clickOn_LogoutInMyProfile(driver);
+			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
+		}
+		catch (Exception e5)
+		{
+			clickOn_Fnp_Logo(driver);
+			implementations.TestWebDriverMethodImplementations.mediumSleep(driver);
 		}
 	}
-
-	public static void reusableMethod_OnlyRemoveProduct(WebDriver driver, String flowerName)
+	public static void reusableMethod_WithoutLogout(WebDriver driver, String flowerName) throws Exception
 	{
-		Boolean ele=driver.findElements(By.xpath(Anniversary_Obj.verify_MessageAfterRemoveProduct(driver))).size()!=0;
-		if(ele==false)
-		{
 		try
 		{
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
-			TestWebDriverMethodImplementations.smallSleep(driver);
+			clickOn_Fnp_Logo(driver);
+			TestWebDriverMethodImplementations.mediumSleep(driver);
 		}
-		catch (Exception e3)
+		catch (Exception e6)
 		{
 		}
 		try
 		{
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			clickOn_ProductRemoveOption(driver, flowerName);
-			TestWebDriverMethodImplementations.smallSleep(driver);
-			TestWebDriverMethodImplementations.alertAccept(driver);
+			clickOn_Cart_AfterAddingProduct(driver);
 			TestWebDriverMethodImplementations.smallSleep(driver);
 		}
-		catch (Exception e4)
+		catch (Exception e1)
 		{
+			System.out.println("Removing products in cart");
 		}
+		try{
+			int size = driver.findElements(By.xpath(Anniversary_Obj.clickOn_ProductRemoveOption2(driver, flowerName))).size();
+			System.out.println(size);
+			if(size!=0)
+		{
+		for (int i = 0; i<size; i++)
+			{
+				TestWebDriverMethodImplementations.smallSleep(driver);
+				clickOn_ProductRemoveOption(driver, flowerName);
+				TestWebDriverMethodImplementations.smallSleep(driver);
+				TestWebDriverMethodImplementations.alertAccept(driver);
+				TestWebDriverMethodImplementations.smallSleep(driver);
+				System.out.println("deleted");
+			}
 		}
+		}catch(Exception ew)
+			{
+				
+			}
+		try{
+			clickOn_Fnp_Logo(driver);
+			implementations.TestWebDriverMethodImplementations.smallSleep(driver);
+			}catch(Exception e37)
+			{
+				
+	}
+
 	}
 
 }
