@@ -21,16 +21,16 @@ public abstract class ActionsImplementation implements GenericActions
 	public static void clickOnLocator(WebDriver driver, String locatorType, String[] locatorValue)
 	{
 		int Locators = locatorValue.length, i = 0;
-		System.out.println(Locators);
+		//System.out.println(Locators);
 		boolean isActionPerformed = false;
 		for (String val : locatorValue)
 		{
 			if (!isActionPerformed)
 			{
 				i++;
-				System.out.println(i);
-				System.out.println(locatorValue);
-				System.out.println(locatorType);
+				//System.out.println(i);
+				//System.out.println(locatorValue);
+				//System.out.println(locatorType);
 				switch (locatorType)
 				{
 				case "id":
@@ -39,7 +39,7 @@ public abstract class ActionsImplementation implements GenericActions
 						try
 						{
 							
-							WebDriverWait wait = new WebDriverWait(driver, 60);
+							WebDriverWait wait = new WebDriverWait(driver, 20);
 							TestWebDriverMethodImplementations.syncSleep(driver);
 							By ele =By.id(val);
 							WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(ele));
@@ -76,10 +76,10 @@ public abstract class ActionsImplementation implements GenericActions
 						}
 						catch (Exception e2)
 						{
-							System.out.println("**");
-							System.out.println("Element not Identified");
-							System.out.println(i);
-							System.out.println(Locators);
+							//System.out.println("**");
+							//System.out.println("Element not Identified");
+							//System.out.println(i);
+							//System.out.println(Locators);
 							if (i == Locators)
 							{
 								throw e2;
@@ -125,10 +125,10 @@ public abstract class ActionsImplementation implements GenericActions
 						}
 						catch (Exception e2)
 						{
-							System.out.println("**");
-							System.out.println("Element not Identified");
-							System.out.println(i);
-							System.out.println(Locators);
+							//System.out.println("**");
+							//System.out.println("Element not Identified");
+							//System.out.println(i);
+							//System.out.println(Locators);
 							if (i == Locators)
 							{
 								throw e2;
@@ -142,7 +142,7 @@ public abstract class ActionsImplementation implements GenericActions
 						try
 						{
 							
-							 WebDriverWait wait = new WebDriverWait(driver, 60);
+							 WebDriverWait wait = new WebDriverWait(driver, 20);
 							 TestWebDriverMethodImplementations.syncSleep(driver);
 							 By ele =By.xpath(val);
 							 WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(ele));
@@ -180,10 +180,10 @@ public abstract class ActionsImplementation implements GenericActions
 						}
 						catch (Exception e2)
 						{
-							System.out.println("**");
-							System.out.println("Element not Identified");
-							System.out.println(i);
-							System.out.println(Locators);
+							//System.out.println("**");
+							//System.out.println("Element not Identified");
+							//System.out.println(i);
+							//System.out.println(Locators);
 							if (i == Locators)
 							{
 								throw e2;
@@ -229,10 +229,10 @@ public abstract class ActionsImplementation implements GenericActions
 						}
 						catch (Exception e2)
 						{
-							System.out.println("**");
-							System.out.println("Element not Identified");
-							System.out.println(i);
-							System.out.println(Locators);
+							//System.out.println("**");
+							//System.out.println("Element not Identified");
+							//System.out.println(i);
+							//System.out.println(Locators);
 							if (i == Locators)
 							{
 								throw e2;
@@ -278,10 +278,10 @@ public abstract class ActionsImplementation implements GenericActions
 						}
 						catch (Exception e2)
 						{
-							System.out.println("**");
-							System.out.println("Element not Identified");
-							System.out.println(i);
-							System.out.println(Locators);
+							//System.out.println("**");
+							//System.out.println("Element not Identified");
+							//System.out.println(i);
+							//System.out.println(Locators);
 							if (i == Locators)
 							{
 								throw e2;
@@ -327,10 +327,10 @@ public abstract class ActionsImplementation implements GenericActions
 						}
 						catch (Exception e2)
 						{
-							System.out.println("**");
-							System.out.println("Element not Identified");
-							System.out.println(i);
-							System.out.println(Locators);
+							//System.out.println("**");
+							//System.out.println("Element not Identified");
+							//System.out.println(i);
+							//System.out.println(Locators);
 							if (i == Locators)
 							{
 								throw e2;
@@ -348,16 +348,16 @@ public abstract class ActionsImplementation implements GenericActions
 	{
 		
 		int Locators = locatorValue.length, i = 0;
-		System.out.println(Locators);
+		//System.out.println(Locators);
 		boolean isActionPerformed = false;
 		for (String val : locatorValue)
 		{
 			if (!isActionPerformed)
 			{
 				i++;
-				System.out.println(i);
-				System.out.println(locatorValue);
-				System.out.println(locatorType);
+				//System.out.println(i);
+				//System.out.println(locatorValue);
+				//System.out.println(locatorType);
 				switch (locatorType)
 				{
 				case "id":
@@ -365,17 +365,17 @@ public abstract class ActionsImplementation implements GenericActions
 					{
 						try
 						{
-							WebDriverWait wait = new WebDriverWait(driver, 60);
+							WebDriverWait wait = new WebDriverWait(driver, 20);
 							TestWebDriverMethodImplementations.syncSleep(driver);
 							
 							WebElement element = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id(val))));
 							//element = driver.findElement(By.id(val));
-							System.out.println("Element Identified");
+							//System.out.println("Element Identified");
 							try
 							{
 								TestWebDriverMethodImplementations.smallSleep(driver);
 								element.sendKeys(testData);
-								System.out.println("Data Entered");
+								//System.out.println("Data Entered");
 								isActionPerformed = true;
 								break;
 							}
@@ -386,7 +386,7 @@ public abstract class ActionsImplementation implements GenericActions
 									TestWebDriverMethodImplementations.smallSleep(driver);
 									JavascriptExecutor jse = (JavascriptExecutor) driver;
 									jse.executeScript("arguments[0].sendKeys()", element);
-									System.out.println("Data Entered");
+									//System.out.println("Data Entered");
 									// Java Script
 									isActionPerformed = true;
 									break;
@@ -396,7 +396,7 @@ public abstract class ActionsImplementation implements GenericActions
 									TestWebDriverMethodImplementations.smallSleep(driver);
 									Actions action = new Actions(driver);
 									element.sendKeys(testData);
-									System.out.println("Data Entered");
+									//System.out.println("Data Entered");
 									action.build().perform();
 									// Actions
 									isActionPerformed = true;
@@ -406,7 +406,7 @@ public abstract class ActionsImplementation implements GenericActions
 						}
 						catch (Exception e3)
 						{
-							System.out.println("Element not Identified");
+							//System.out.println("Element not Identified");
 						}
 					}
 					break;
@@ -448,7 +448,7 @@ public abstract class ActionsImplementation implements GenericActions
 						}
 						catch (Exception e2)
 						{
-							System.out.println("Element not Identified");
+							//System.out.println("Element not Identified");
 						}
 					}
 					break;
@@ -457,7 +457,7 @@ public abstract class ActionsImplementation implements GenericActions
 					{
 						try
 						{
-							WebDriverWait wait = new WebDriverWait(driver, 60);
+							WebDriverWait wait = new WebDriverWait(driver, 20);
 							TestWebDriverMethodImplementations.syncSleep(driver);
 							WebElement element = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(val))));
 							/*element = driver.findElement(By.xpath(val));*/
@@ -493,10 +493,10 @@ public abstract class ActionsImplementation implements GenericActions
 						}
 						catch (Exception e2)
 						{
-							System.out.println("**");
-							System.out.println("Element not Identified");
-							System.out.println(i);
-							System.out.println(Locators);
+							//System.out.println("**");
+							//System.out.println("Element not Identified");
+							//System.out.println(i);
+							//System.out.println(Locators);
 							if (i == Locators)
 							{
 								throw e2;
@@ -542,7 +542,7 @@ public abstract class ActionsImplementation implements GenericActions
 						}
 						catch (Exception e2)
 						{
-							System.out.println("Element not Identified");
+							//System.out.println("Element not Identified");
 						}
 					}
 					break;

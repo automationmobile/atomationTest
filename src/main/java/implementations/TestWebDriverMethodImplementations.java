@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import objectsrepository.Anniversary_Obj;
+import objectsrepository.Personalized_Obj;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -368,7 +368,7 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 			e.printStackTrace();
 		}
 	}
-
+	
 	public static void highlightElement(WebDriver driver, String Val)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -445,6 +445,32 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 		}
 		
 	}
-	
+	public static void mouseHoverAndClickWebElement(WebDriver driver,String ele,String ele2)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		TestWebDriverMethodImplementations.syncSleep(driver);
+		By elem =By.xpath(ele);
+		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(elem));
+		Actions action = new Actions(driver);
+		action.moveToElement(element).build().perform();
+		TestWebDriverMethodImplementations.syncSleep(driver);
+		WebElement element2 = driver.findElement(By.xpath(ele2));
+		action.moveToElement(element2).click().build().perform();
+		System.out.println("Mousehover action is performed");
+	}
+	public static void clickWhenElementActive(WebDriver driver, String Val)
+	{
+		TestWebDriverMethodImplementations.syncSleep(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(Val))));
+		//TestWebDriverMethodImplementations.smallSleep(driver);
+		//WebElement ele = driver.findElement(By.xpath(Val));
+		// Create object of a JavascriptExecutor interface
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		// use executeScript() method and pass the arguments
+		// Here i pass values based on css style. Yellow background color with
+		// solid red color border.
+		js.executeScript("arguments[0].setAttribute('style', 'border: 2px solid green;');", ele);
+	}
 	
 }
