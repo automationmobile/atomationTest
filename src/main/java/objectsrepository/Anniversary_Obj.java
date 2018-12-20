@@ -2,13 +2,14 @@ package objectsrepository;
 
 import org.openqa.selenium.WebDriver;
 
-public class Personalized_Obj
+public class Anniversary_Obj
 {
 	public static String validate_Account(WebDriver driver)
 	{
 		String val="//span[@id='user-name']";
 		return val;
 	}
+	
 	public static String validate_Cart(WebDriver driver)
 	{
 		String val="(//span[@class='cart-icon'])[last()]";
@@ -85,75 +86,40 @@ public class Personalized_Obj
 		String val="(//a[text()='Occasions'])[last()]";
 		return val;
 	}
-	public static String mouseHover_Personalized(WebDriver driver)
+	public static String mouseHover_Anniverary(WebDriver driver)
 	{
-		String val="//a[@id='#personalizedmenu']";
+		String val="(//a[text()='Anniversary'])[1]";
 		return val;
 	}
-	public static String clickOn_AllPersonalizedGifts(WebDriver driver)
+	public static String clickOn_Flowers(WebDriver driver)
 	{
-		String val="//a[@href='/personalised-gifts?promo=personalizedmenu_dt_hm']";
+		String val="(//a[text()='Flowers'])[last()]";
 		return val;
 	}
-	public static String clickOn_WithEggInPdp(WebDriver driver)
+	public static String clickOn_FlowersProduct(WebDriver driver,String flowerName)
 	{
-		String val="//div[@id='cake-withegg']";
+		String val="//span[text()=' "+flowerName+"']";
 		return val;
 	}
-	public static String clickOn_WithEgglessInPdp(WebDriver driver)
-	{
-		String val="//div[@id='cake-eggless']";
-		return val;
-	}
-	public static String clickOn_ProductWithUploadImage(WebDriver driver)
-	{
-		String val="(//span[@class='p-name'])[1]";
-		return val;
-	}
-	public static String clickOn_ProductWithUploadImageAndMessage(WebDriver driver)
-	{
-		String val="(//span[@class='p-name'])[22]";
-		return val;
-	}
-	public static String clickOn_ProductWithMessage(WebDriver driver)
-	{
-		String val="(//span[@class='p-name'])[13]";
-		return val;
-	}
-	
-	public static String verify_sizeOfMessageFieldInPDP(WebDriver driver)
-	{
-		String val="//span[@class='charleft ng-binding']";
-		return val;
-	}
-	public static String sendKeys_MessageInPdp(WebDriver driver)
-	{
-		String val="//div[@id='personal-text']/input[1]";
-		return val;
-	}
-	public static String verify_Product(WebDriver driver)
+	public static String verify_FlowersProduct(WebDriver driver)
 	{
 		String val="//div[@itemprop='name']";
 		return val;
 	}
 	public static String verify_ProductPrice(WebDriver driver)
 	{
-		String val="//div[@class='odometer-inside']";
+		String val="//span[@class='odometer-price']";
 		return val;
 	}
 	public static String verify_Pincode(WebDriver driver)
 	{
-		String val="//input[@id='destlookup']";
+		String val="//div[@class='price-crossline']";
 		return val;
 	}
+	
 	public static String verify_Date(WebDriver driver)
 	{
 		String val="//a[@id='datetimelink']";
-		return val;
-	}
-	public static String verify_FlavourErrorInPdp(WebDriver driver)
-	{
-		String val="//div[@id='flavourError']";
 		return val;
 	}
 	public static String verify_AddToCart(WebDriver driver)
@@ -259,26 +225,25 @@ public class Personalized_Obj
 		String val="//span[text()='Cart']";
 		return val;
 	}
-	public static String verify_ProductInCart(WebDriver driver)
+	public static String verify_ProductInCart(WebDriver driver,String productName)
 	{
-		String val="(//div[@class='cart-productname'])[1]";
+		String val="(//span[text()='"+productName+"'])[last()]";
 		return val;
 	}
-	public static String clickOn_ProductRemoveOption(WebDriver driver)
+	public static String clickOn_ProductRemoveOption(WebDriver driver,String productName)
 	{
-		String val="(//div[@class='cart-productname'])[1]/span[2]";
-		return val;
-				
-	}
-	public static String clickOn_ProductRemoveOption2(WebDriver driver)
-	{
-		String val="(//div[@class='cart-productname'])/span[2]";
+		String val="(//span[text()='"+productName+"'])[1]/following::span[1]";
 		return val;
 				
 	}
-	public static String clickOn_AddonProduct(WebDriver driver)
+	public static String clickOn_ProductRemoveOption2(WebDriver driver,String productName)
 	{
-		String val="(//div[@class='addon-nav']/span)[1]";
+		String val="(//span[text()='"+productName+"'])/following::span[1]";
+		return val;	
+	}
+	public static String clickOn_AddonProduct(WebDriver driver,String addOnProductName)
+	{
+		String val="//span[text()='"+addOnProductName+"']";
 		return val;
 	}
 	public static String verify_AddOnProduct(WebDriver driver,String addOnProductName)
@@ -439,9 +404,9 @@ public class Personalized_Obj
 		String val="//span[text()='Invalid Email ID or password.']";
 		return val;
 	}
-	public static String verify_ProductNameInProductDeliveryPage(WebDriver driver)
+	public static String verify_ProductNameInProductDeliveryPage(WebDriver driver,String productName)
 	{
-		String val="(//div[@class='cart-product-title'])[1]";
+		String val="//div[text()='"+productName+"']";
 		return val;
 	}
 	public static String verify_ChangeButtonInProductDeliveryPage(WebDriver driver)
@@ -479,9 +444,9 @@ public class Personalized_Obj
 		String val="//div[@class='delivery-method']";
 		return val;
 	}
-	public static String clickOn_DeleteButtonInDeliveryDtailsPage(WebDriver driver)
+	public static String clickOn_DeleteButtonInDeliveryDtailsPage(WebDriver driver,String flowerName)
 	{
-		String val="(//div[@class='main-product-image'])[1]/div[1]";
+		String val="(//div[text()='"+flowerName+"'])[last()]/preceding::span[1]";
 		return val;
 	}
 	public static String clickOn_Yes(WebDriver driver)
@@ -571,7 +536,7 @@ public class Personalized_Obj
 	}
 	public static String verify_ErrorMessageForInvalidMobileNumberInDeliveryDetails(WebDriver driver)
 	{
-		String val="//span[text()='* Recipient’s mobile number is invalid.']";
+		String val="//span[text()='* Recipientâ€™s mobile number is invalid.']";
 		return val;
 	}
 	public static String sendKeys_OptionalMailidInDeliveryDetails(WebDriver driver)
@@ -725,59 +690,9 @@ public class Personalized_Obj
 		String val="//li[text()='"+value+"']";
 		return val;
 	}
-	public static String clickOn_SelectFlavour(WebDriver driver)
+	public static String verifyPaymentSucessfulMessage(WebDriver driver)
 	{
-		String val="//a[text()=' Select Flavour ']";
-		return val;
-	}
-	public static String clickOn_SelectFlavour2(WebDriver driver)
-	{
-		String val="//span[@id='dropdown-arrow']";
-		return val;
-	}
-	public static String clickOn_FlavourSuggestion(WebDriver driver)
-	{
-		String val="//a[text()=' Select Flavour ']/following::li[1]";
-		return val;
-	}
-	public static String clickOn_FlavourSuggestion2(WebDriver driver)
-	{
-		String val="//div[@class='dropdownoptions']/ul/li[1]";
-		return val;
-	}
-	public static String clickOn_VarientItem(WebDriver driver)
-	{
-		String val="//li[@class='variantItem selectedVariant']/following::li[1]";
-		return val;
-	}
-	public static String mouseHover_MessageOnCakeElement(WebDriver driver)
-	{
-		String val="(//div[@class='textbox-sec']/textarea[1])[last()]";
-		return val;
-	}
-	public static String mouseHover_MessageOnCakeEdit(WebDriver driver)
-	{
-		String val="//div[@id='textbox-edit']";
-		return val;
-	}
-	public static String clickOn_ImageUploadInPdp(WebDriver driver)
-	{
-		String val="//div[@id='img-size']";
-		return val;
-	}
-	public static String verify_ImageUploadSucessful(WebDriver driver)
-	{
-		String val="//span[@class='upload-title uploaded']";
-		return val;
-	}
-	public static String verify_ChangePhoto(WebDriver driver)
-	{
-		String val="//span[text()='Change Photo']";
-		return val;
-	}
-	public static String verify_ErrorForMessageOnPDP(WebDriver driver)
-	{
-		String val="//div[@id='personalMsgAlert']";
+		String val="//span[@class='orderId']";
 		return val;
 	}
 }

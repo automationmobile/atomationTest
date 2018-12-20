@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Personalized Suite">
+<suite name="Anniversary Suite">
 <listeners>
 <listener class-name="implementations.CustomizedEmailableReport"></listener>
 </listeners>
   <test name="Test">
     <classes>
-      <class name="testsuite.Personalized_Suite"/>
+      <class name="testsuite.Anniversary_Suite"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

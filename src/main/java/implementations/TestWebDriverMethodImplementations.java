@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import objectsrepository.Personalized_Obj;
-
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -209,7 +207,7 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 		}
 	}
 
-	public void click(WebDriver driver, final WebElement element)
+	public static void click(WebDriver driver, final WebElement element)
 	{
 		Actions action = new Actions(driver);
 		action.click(element).perform();
@@ -368,7 +366,7 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void highlightElement(WebDriver driver, String Val)
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -401,7 +399,9 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 	}
 	public static void mouseHoverToElement(WebDriver driver, String Val)
 	{
-		WebElement element=driver.findElement(By.xpath(Val));
+		TestWebDriverMethodImplementations.syncSleep(driver);
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebElement element = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(Val))));
 		Actions action=new Actions(driver);
 		action.moveToElement(element);
 	}
@@ -409,6 +409,7 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 	{
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
+		TestWebDriverMethodImplementations.smallSleep(driver);
 	}
 	public static void clearText(WebDriver driver,String val)
 	{
@@ -423,7 +424,7 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 			driver.findElement(By.xpath(element)).click();
 			System.out.println("Element is clicked");
 			
-		}catch(Exception e)
+		}catch(Exception e) 
 		{
 			System.out.println("Element is unable to clicked");
 		}
@@ -458,19 +459,4 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 		action.moveToElement(element2).click().build().perform();
 		System.out.println("Mousehover action is performed");
 	}
-	public static void clickWhenElementActive(WebDriver driver, String Val)
-	{
-		TestWebDriverMethodImplementations.syncSleep(driver);
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(Val))));
-		//TestWebDriverMethodImplementations.smallSleep(driver);
-		//WebElement ele = driver.findElement(By.xpath(Val));
-		// Create object of a JavascriptExecutor interface
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		// use executeScript() method and pass the arguments
-		// Here i pass values based on css style. Yellow background color with
-		// solid red color border.
-		js.executeScript("arguments[0].setAttribute('style', 'border: 2px solid green;');", ele);
-	}
-	
 }
