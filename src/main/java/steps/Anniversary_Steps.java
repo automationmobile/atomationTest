@@ -262,6 +262,7 @@ public class Anniversary_Steps
 	}
 	public static void clickOn_AddonProduct(WebDriver driver,String addOnProductName)
 	{
+		TestWebDriverMethodImplementations.syncSleep(driver);
 		String[] val={Anniversary_Obj.clickOn_AddonProduct(driver, addOnProductName)};
 		implementations.ActionsImplementation.clickOnLocator(driver, "xpath", val);		
 	}
@@ -301,16 +302,31 @@ public class Anniversary_Steps
 		implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verify_ShippingDetailsInProductDetailsPage(driver));
 	}
 	public static void verify_DeliveryDateOfMonth(WebDriver driver)
-	{
-		implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verify_DeliveryDateOfMonth(driver));
+	{ 
+		try{
+		implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verify_DeliveryDateOfMonth2(driver));
+		}catch(Exception e)
+		{
+			implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verify_DeliveryDateOfMonth(driver));			
+		}
 	}
 	public static void verify_DeliveryMonth(WebDriver driver)
 	{
+		try{
+		implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verify_DeliveryMonth2(driver));
+		}catch(Exception e)
+		{
 		implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verify_DeliveryMonth(driver));
+		}
 	}
 	public static void verify_ShippingMethod(WebDriver driver)
 	{
-		implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verify_ShippingMethod(driver));
+		try{
+		implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verify_ShippingMethod2(driver));
+		}catch(Exception e)
+		{
+		implementations.TestWebDriverMethodImplementations.highlightElement(driver, Anniversary_Obj.verify_ShippingMethod(driver));			
+		}
 	}
 	public static void verify_TimeSlot(WebDriver driver)
 	{
@@ -750,10 +766,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -823,10 +839,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -895,10 +911,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -957,10 +973,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1024,10 +1040,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1091,10 +1107,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1151,10 +1167,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1210,10 +1226,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1261,10 +1277,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1316,10 +1332,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1363,10 +1379,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1408,10 +1424,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1446,10 +1462,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1484,10 +1500,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1524,10 +1540,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1570,10 +1586,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1610,10 +1626,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1650,10 +1666,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1689,10 +1705,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1727,10 +1743,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1764,10 +1780,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1813,10 +1829,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1857,10 +1873,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1895,10 +1911,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1931,10 +1947,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1966,10 +1982,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -1999,10 +2015,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -2041,10 +2057,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -2074,10 +2090,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ContinueWithoutAddons(driver);
@@ -2117,10 +2133,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_AddonProduct(driver, addOnProductName);
@@ -2159,10 +2175,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		verify_DeliveryDateOfMonth(driver);
 		verify_DeliveryMonth(driver);
 		verify_ShippingMethod(driver);
@@ -2209,10 +2225,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_AddToCart(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ContinueWithoutAddons(driver);
@@ -2243,10 +2259,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_AddToCart(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ContinueWithoutAddons(driver);
@@ -2278,10 +2294,10 @@ public class Anniversary_Steps
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_SameDayDate(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
-		clickOn_ShippingMethods(driver);
+		/*clickOn_ShippingMethods(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ShippingTime(driver);
-		TestWebDriverMethodImplementations.mediumSleep(driver);
+		TestWebDriverMethodImplementations.mediumSleep(driver);*/
 		clickOn_AddToCart(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);
 		clickOn_ContinueWithoutAddons(driver);
@@ -2317,7 +2333,7 @@ public class Anniversary_Steps
 		verify_FlowersProduct(driver);
 		verify_ProductPrice(driver);
 		verify_Pincode(driver);
-		verify_Date(driver);
+		//verify_Date(driver);
 		verify_AddToCart(driver);
 		verify_BuyNow(driver);
 		TestWebDriverMethodImplementations.smallSleep(driver);

@@ -93,12 +93,12 @@ public class Anniversary_Obj
 	}
 	public static String clickOn_Flowers(WebDriver driver)
 	{
-		String val="(//a[text()='Flowers'])[last()]";
+		String val="//a[@href='/flowers/anniversary?promo=anniversarymenu_dt_hm']";
 		return val;
 	}
 	public static String clickOn_FlowersProduct(WebDriver driver,String flowerName)
 	{
-		String val="//span[text()=' "+flowerName+"']";
+		String val="(//span[@class='p-name'])[2]";
 		return val;
 	}
 	public static String verify_FlowersProduct(WebDriver driver)
@@ -150,7 +150,7 @@ public class Anniversary_Obj
 	}
 	public static String clickOn_Date(WebDriver driver)
 	{
-		String val="//a[@title='You can select date and time of delivery after providing valid pincode']";
+		String val="//li[@id='selecte_date']";
 		return val;
 	}
 	public static String clickOn_SameDayDate(WebDriver driver)
@@ -227,23 +227,23 @@ public class Anniversary_Obj
 	}
 	public static String verify_ProductInCart(WebDriver driver,String productName)
 	{
-		String val="(//span[text()='"+productName+"'])[last()]";
+		String val="(//div[@class='cart-productname'])[1]";
 		return val;
 	}
 	public static String clickOn_ProductRemoveOption(WebDriver driver,String productName)
 	{
-		String val="(//span[text()='"+productName+"'])[1]/following::span[1]";
+		String val="(//div[@class='cart-productname'])[1]/span[2]";
 		return val;
 				
 	}
 	public static String clickOn_ProductRemoveOption2(WebDriver driver,String productName)
 	{
-		String val="(//span[text()='"+productName+"'])/following::span[1]";
+		String val="(//div[@class='cart-productname'])/span[2]";
 		return val;	
 	}
 	public static String clickOn_AddonProduct(WebDriver driver,String addOnProductName)
 	{
-		String val="//span[text()='"+addOnProductName+"']";
+		String val="(//div[@class='addon-nav']/span)[1]";
 		return val;
 	}
 	public static String verify_AddOnProduct(WebDriver driver,String addOnProductName)
@@ -288,22 +288,37 @@ public class Anniversary_Obj
 	}
 	public static String verify_DeliveryDateOfMonth(WebDriver driver)
 	{
-		String val="//span[@id='deliverydateofmonth']";
+		String val="(//span[@class='currentdate'])[1]";
+		return val;
+	}
+	public static String verify_DeliveryDateOfMonth2(WebDriver driver)
+	{
+		String val="(//span[@class='currentdate'])[3]";
 		return val;
 	}
 	public static String verify_DeliveryMonth(WebDriver driver)
 	{
-		String val="//span[@id='deliverymonth']";
+		String val="(//span[@class='currentMon'])[1]";
+		return val;
+	}
+	public static String verify_DeliveryMonth2(WebDriver driver)
+	{
+		String val="(//span[@class='currentMon'])[3]";
 		return val;
 	}
 	public static String verify_ShippingMethod(WebDriver driver)
 	{
-		String val="//span[@id='shippingmethod']";
+		String val="(//div[@class='deivery-title'])[1]";
+		return val;
+	}
+	public static String verify_ShippingMethod2(WebDriver driver)
+	{
+		String val="(//div[@class='deivery-title'])[3]";
 		return val;
 	}
 	public static String verify_TimeSlot(WebDriver driver)
 	{
-		String val="//span[@id='timeslot']";
+		String val="(//ul[@class='timeslots']/li[@class='active'])[last()]";
 		return val;
 	}
 	
@@ -406,7 +421,7 @@ public class Anniversary_Obj
 	}
 	public static String verify_ProductNameInProductDeliveryPage(WebDriver driver,String productName)
 	{
-		String val="//div[text()='"+productName+"']";
+		String val="(//div[@class='cart-product-title'])[1]";
 		return val;
 	}
 	public static String verify_ChangeButtonInProductDeliveryPage(WebDriver driver)
@@ -446,7 +461,7 @@ public class Anniversary_Obj
 	}
 	public static String clickOn_DeleteButtonInDeliveryDtailsPage(WebDriver driver,String flowerName)
 	{
-		String val="(//div[text()='"+flowerName+"'])[last()]/preceding::span[1]";
+		String val="(//div[@class='trash'])[1]";
 		return val;
 	}
 	public static String clickOn_Yes(WebDriver driver)
@@ -536,7 +551,7 @@ public class Anniversary_Obj
 	}
 	public static String verify_ErrorMessageForInvalidMobileNumberInDeliveryDetails(WebDriver driver)
 	{
-		String val="//span[text()='* Recipientâ€™s mobile number is invalid.']";
+		String val="//span[text()='* Recipient’s mobile number is invalid.']";
 		return val;
 	}
 	public static String sendKeys_OptionalMailidInDeliveryDetails(WebDriver driver)
