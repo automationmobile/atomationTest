@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Personalized Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Plants Suite]">
   <listeners>
     <listener class-name="implementations.CustomizedEmailableReport"/>
   </listeners>
   <test name="Test">
     <classes>
-      <class name="testsuite.Personalized_Suite"/>
+      <class name="testsuite.Plants_Suite"/>
     </classes>
   </test> <!-- Test -->
-</suite> <!-- Failed suite [Personalized Suite] -->
+</suite> <!-- Failed suite [Plants Suite] -->

@@ -9,16 +9,4 @@
       <class name="testsuite.Anniversary_Suite"/>
     </classes>
   </test> <!-- Test -->
-  <test name="Test(failed)">
-    <classes>
-      <class name="testsuite.Anniversary_Suite">
-        <methods>
-          <include name="fnp_Anniversary_042" invocation-numbers="0"/>
-          <include name="fnp_Anniversary_040" invocation-numbers="0"/>
-          <include name="Setup"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testsuite.Anniversary_Suite -->
-    </classes>
-  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Anniversary Suite] -->
