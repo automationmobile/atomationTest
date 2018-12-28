@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -28,7 +29,6 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 	static WebDriver driver;
 	private static String BASE_URL;
 	private int DEFAULT_WAIT_TIME = 10;
-	 
 
 	public void testWebDriverMethod(WebDriver driver)
 	{
@@ -207,10 +207,16 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 		}
 	}
 
-	public static void click(WebDriver driver, final WebElement element)
+	public void clickWithAction(WebDriver driver, final WebElement element)
 	{
 		Actions action = new Actions(driver);
 		action.click(element).perform();
+	}
+	public static void click(WebDriver driver, final String  element)
+	{
+		TestWebDriverMethodImplementations.smallSleep(driver);
+		WebElement ele= driver.findElement(By.xpath(element));
+		ele.click();
 	}
 
 	public static void doubleClick(WebDriver driver, String value)
@@ -230,8 +236,10 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 		}
 	}
 
-	public void moveToElement(WebDriver driver, WebElement element)
+	public static void moveToElement(WebDriver driver, String ele)
 	{
+		implementations.TestWebDriverMethodImplementations.smallSleep(driver);
+		WebElement element=driver.findElement(By.xpath(ele));
 		new Actions(driver).moveToElement(element).perform();
 	}
 
@@ -359,7 +367,7 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 	{
 		try
 		{
-			Thread.sleep(10000);
+			Thread.sleep(15000);
 		}
 		catch (InterruptedException e)
 		{
@@ -369,11 +377,8 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 
 	public static void highlightElement(WebDriver driver, String Val)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, 30);
-		TestWebDriverMethodImplementations.syncSleep(driver);
-		WebElement ele = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(Val))));
-		//TestWebDriverMethodImplementations.smallSleep(driver);
-		//WebElement ele = driver.findElement(By.xpath(Val));
+		TestWebDriverMethodImplementations.smallSleep(driver);
+		WebElement ele = driver.findElement(By.xpath(Val));
 		// Create object of a JavascriptExecutor interface
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		// use executeScript() method and pass the arguments
@@ -385,11 +390,8 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 	}
 	public static void highlightElementWithoutText(WebDriver driver, String Val)
 	{
-		TestWebDriverMethodImplementations.syncSleep(driver);
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		WebElement ele = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(Val))));
-		//TestWebDriverMethodImplementations.smallSleep(driver);
-		//WebElement ele = driver.findElement(By.xpath(Val));
+		TestWebDriverMethodImplementations.smallSleep(driver);
+		WebElement ele = driver.findElement(By.xpath(Val));
 		// Create object of a JavascriptExecutor interface
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		// use executeScript() method and pass the arguments
@@ -399,22 +401,29 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 	}
 	public static void mouseHoverToElement(WebDriver driver, String Val)
 	{
-		TestWebDriverMethodImplementations.syncSleep(driver);
-		WebDriverWait wait = new WebDriverWait(driver, 20);
-		WebElement element = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(Val))));
+		WebElement element=driver.findElement(By.xpath(Val));
 		Actions action=new Actions(driver);
-		action.moveToElement(element);
+		action.moveToElement(element).build().perform();
 	}
 	public static void alertAccept(WebDriver driver)
 	{
 		Alert alert = driver.switchTo().alert();
 		alert.accept();
-		TestWebDriverMethodImplementations.smallSleep(driver);
+	}
+	public static void alertDismiss(WebDriver driver)
+	{
+		Alert alert = driver.switchTo().alert();
+		alert.dismiss();
 	}
 	public static void clearText(WebDriver driver,String val)
 	{
 		WebElement element=driver.findElement(By.xpath(val));
 		element.clear();
+		
+	}
+	public static void element(WebDriver driver,String val)
+	{
+		driver.findElement(By.xpath(val));
 		
 	}
 	public static void verifyWebElementWithTry(WebDriver driver, String element)
@@ -424,7 +433,7 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 			driver.findElement(By.xpath(element)).click();
 			System.out.println("Element is clicked");
 			
-		}catch(Exception e) 
+		}catch(Exception e)
 		{
 			System.out.println("Element is unable to clicked");
 		}
@@ -453,10 +462,12 @@ public abstract class TestWebDriverMethodImplementations implements GenericActio
 		By elem =By.xpath(ele);
 		WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(elem));
 		Actions action = new Actions(driver);
-		action.moveToElement(element).build().perform();
-		TestWebDriverMethodImplementations.syncSleep(driver);
+		action.moveToElement(element).moveToElement(driver.findElement(By.xpath(ele2))).click().build().perform();
+		/*TestWebDriverMethodImplementations.syncSleep(driver);
 		WebElement element2 = driver.findElement(By.xpath(ele2));
 		action.moveToElement(element2).click().build().perform();
-		System.out.println("Mousehover action is performed");
+		System.out.println("Mousehover action is performed");*/
 	}
+	
+	
 }
