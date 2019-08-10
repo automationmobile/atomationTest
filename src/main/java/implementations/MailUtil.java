@@ -22,7 +22,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import testsuite.Plants_Suite;
+import testsuite.Amazon_Suite;
 
 
 
@@ -35,7 +35,7 @@ public static void sendMail(String console, String TestID,String TestName ) {
 		
 		try {
 		  Message msg = new MimeMessage(session);
-		  msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:PlantsSuite"));
+		  msg.setFrom(new InternetAddress("testautomation@fnp.com", "DsmSuite"));
 		  msg.addRecipient(Message.RecipientType.TO, new InternetAddress("saikumar@clicqa.com"));
 		  String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 		  msg.setSubject("!!!Alert!!! Critical : "+TestID+ "-->"+TestName+ " --Failed--\t TimeStamp:" +timeStamp);
@@ -59,7 +59,7 @@ public static void sendConsolidatedReport() {
 		
 		try {
 			Message msg = new MimeMessage(session);
-			msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:PlantsSuite"));
+			msg.setFrom(new InternetAddress("testautomation@fnp.com", "DsmSuite"));
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress("saikumar@clicqa.com"));
 			String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
 			msg.setSubject("Alert:'Critical:Login Failed'\t" + timeStamp);
@@ -98,18 +98,16 @@ public static void sendConsolidatedReport() {
 		}
 		Multipart mp = new MimeMultipart();
 
-		/*String extentReport=MyAccount_Suite.extentReport;*/
+		
 		try {
 			MimeBodyPart htmlPart = new MimeBodyPart();
 			htmlPart.setContent(htmlcontent, "text/html");
 			mp.addBodyPart(htmlPart);
 
 			MimeBodyPart attachment = new MimeBodyPart();
-			attachment.attachFile(new File(Plants_Suite.extentReport));
+			attachment.attachFile(new File(Amazon_Suite.extentReport));
 			
-			/*InputStream attachmentDataStream = new ByteArrayInputStream(attachmentData);
-			attachment.setFileName("testmail.pdf");
-			attachment.setContent(attachmentDataStream, "application/pdf");*/
+			
 			mp.addBodyPart(attachment);
 
 			 String timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
@@ -118,7 +116,7 @@ public static void sendConsolidatedReport() {
 			
 			if(count>0)
 			{
-				msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:PlantsSuite"));
+				msg.setFrom(new InternetAddress("testautomation@fnp.com", "DsmSuite"));
 				msg.addRecipient(Message.RecipientType.TO, new InternetAddress("saikumar@clicqa.com"));
 				msg.setSubject("!!!Alert!!! "+count+" Critical Test Case Failed \t TimeStamp: " +timeStamp);
 				msg.setContent(mp);
@@ -127,11 +125,10 @@ public static void sendConsolidatedReport() {
 			}
 			else
 			{
-				msg.setFrom(new InternetAddress("testautomation@fnp.com", "Desktop:PlantsSuite"));
+				msg.setFrom(new InternetAddress("testautomation@fnp.com", "DsmSuite"));
 				msg.addRecipient(Message.RecipientType.TO, new InternetAddress("saikumar@clicqa.com"));
 				msg.setSubject("No Critical Test Failures\t TimeStamp" +timeStamp);
 				msg.setContent(mp);
-				
 				Transport.send(msg);
 			}
 		} catch (Exception e) {

@@ -311,4 +311,14 @@ public abstract class ReusableMethodsImplementation implements GenericActions
 		timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime()).toString();
 		return timeStamp;
 	}
+	public static ExtentReports testInfo_WithCurrentUrl(WebDriver driver, String Message, ExtentTest logger, ExtentReports report)
+	{
+		String URL =driver.getCurrentUrl();
+		logger.log(LogStatus.INFO,"Current URL: " + URL);
+		String screenshot_path = createScreenshot(driver);
+		String image = logger.addScreenCapture(screenshot_path);
+		logger.log(LogStatus.INFO, Message, image);
+		report.endTest(logger);
+		return report;
+	}
 }

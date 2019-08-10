@@ -3,57 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="testsuite.Anniversary_Suite"/>
+      <class name="testsuite.Amazon_Suite"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="testsuite.Anniversary_Suite">
-        <methods>
-          <include name="FNP_Anniversary_017"/>
-          <include name="FNP_Anniversary_039"/>
-          <include name="FNP_Anniversary_015"/>
-          <include name="FNP_Anniversary_037"/>
-          <include name="FNP_Anniversary_018"/>
-          <include name="Setup"/>
-          <include name="FNP_Anniversary_019"/>
-          <include name="FNP_Anniversary_031"/>
-          <include name="FNP_Anniversary_012"/>
-          <include name="FNP_Anniversary_034"/>
-          <include name="FNP_Anniversary_010"/>
-          <include name="FNP_Anniversary_032"/>
-          <include name="FNP_Anniversary_013"/>
-          <include name="FNP_Anniversary_035"/>
-          <include name="FNP_Anniversary_016"/>
-          <include name="FNP_Anniversary_038"/>
-          <include name="FNP_Anniversary_011"/>
-          <include name="FNP_Anniversary_033"/>
-          <include name="FNP_Anniversary_014"/>
-          <include name="FNP_Anniversary_036"/>
-          <include name="FNP_Anniversary_030"/>
-          <include name="FNP_Anniversary_006"/>
-          <include name="FNP_Anniversary_028"/>
-          <include name="FNP_Anniversary_009"/>
-          <include name="FNP_Anniversary_004"/>
-          <include name="FNP_Anniversary_026"/>
-          <include name="FNP_Anniversary_007"/>
-          <include name="FNP_Anniversary_029"/>
-          <include name="FNP_Anniversary_008"/>
-          <include name="FNP_Anniversary_020"/>
-          <include name="FNP_Anniversary_042"/>
-          <include name="FNP_Anniversary_023"/>
-          <include name="FNP_Anniversary_040"/>
-          <include name="FNP_Anniversary_021"/>
-          <include name="FNP_Anniversary_024"/>
-          <include name="FNP_Anniversary_005"/>
-          <include name="FNP_Anniversary_027"/>
-          <include name="FNP_Anniversary_022"/>
-          <include name="FNP_Anniversary_003"/>
-          <include name="FNP_Anniversary_025"/>
-          <include name="FNP_Anniversary_041"/>
-          <include name="FNP_Anniversary002"/>
-        </methods>
-      </class> <!-- testsuite.Anniversary_Suite -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
