@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Payment Gateway Suite]">
+  <listeners>
+    <listener class-name="implementations.CustomizedEmailableReport"/>
+  </listeners>
+  <test name="Test">
+    <classes>
+      <class name="testsuite.Payment_Suite"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="testsuite.Payment_Suite">
+        <methods>
+          <include name="fnp_Payment_001" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- testsuite.Payment_Suite -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Payment Gateway Suite] -->
